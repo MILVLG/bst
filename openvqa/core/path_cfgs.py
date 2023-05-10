@@ -39,14 +39,12 @@ class PATH:
                 'test': self.DATA_PATH['vqa'] + '/raw' + '/test_questions.json',
             },
             'gqa': {
-                'train': self.DATA_PATH['gqa'] + '/raw' + '/questions1.2/train_balanced_questions.json',
-                'val': self.DATA_PATH['gqa'] + '/raw' + '/questions1.2/val_balanced_questions.json',
-                'testdev': self.DATA_PATH['gqa'] + '/raw' + '/questions1.2/testdev_balanced_questions.json',
-                'test': self.DATA_PATH['gqa'] + '/raw' + '/questions1.2/submission_all_questions.json',
-                'val_all': self.DATA_PATH['gqa'] + '/raw' + '/questions1.2/val_all_questions.json',
-                'testdev_all': self.DATA_PATH['gqa'] + '/raw' + '/questions1.2/testdev_all_questions.json',
-                'train_choices': self.DATA_PATH['gqa'] + '/raw' + '/eval/train_choices',
-                'val_choices': self.DATA_PATH['gqa'] + '/raw' + '/eval/val_choices.json',
+                'train': self.DATA_PATH['gqa'] + '/raw' + '/train_balanced_questions.json',
+                'val': self.DATA_PATH['gqa'] + '/raw' + '/val_balanced_questions.json',
+                'testdev': self.DATA_PATH['gqa'] + '/raw' + '/testdev_balanced_questions.json',
+                'test': self.DATA_PATH['gqa'] + '/raw' + '/submission_all_questions.json',
+                'val_all': self.DATA_PATH['gqa'] + '/raw' + '/val_all_questions.json',
+                'testdev_all': self.DATA_PATH['gqa'] + '/raw' + '/testdev_all_questions.json',
             },
         }
 
