@@ -21,11 +21,19 @@ Please follow the openvqa documentation to prepare the image features for [VQA-v
 
 - QA Annotations
 
-Since we follow the dataset splitting strategy in [UNITER](https://github.com/ChenRocks/UNITER), please download our re-splited QA annotations from [BaiduYun](https://pan.baidu.com/s/1DuL9b-XeN5fNH6OmTHUPRg?pwd=8888) and unpack them.
+Please download our re-splited QA annotations for [VQA-v2](https://awma1-my.sharepoint.com/:u:/g/personal/yuz_l0_tn/EXjbjynrARdMhoPlBpbt7YABAUDMUXFJDE35X-Zb9rgv0w?download=1) and [GQA](https://awma1-my.sharepoint.com/:u:/g/personal/yuz_l0_tn/EQVTkcVtPi1AtFoIXPA2bvEBB0D5JUsCFfe60VpdLPqN_A?download=1) datasets and unzip them to the specified directory.
+
+```
+# for VQA-v2 QA annotations
+$ unzip -d ./data/vqa/raw/ vqa-data.zip
+
+# for GQA QA annotations
+$ unzip -d ./data/gqa/raw/ gqa-data.zip
+```
 
 ### Teacher Model Checkpoint
 
-Please download the teacher model weights for BST training from [BaiduYun](https://pan.baidu.com/s/1zQOCy5rdHAWEoAc5YRio-w?pwd=8888).
+Please download the [VQA-v2](https://awma1-my.sharepoint.com/:u:/g/personal/yuz_l0_tn/EUxPX_bCXTBMh8SMo4lhczUBL1SekpcJwSMT2XYZ0deFOQ?download=1) and [GQA](https://awma1-my.sharepoint.com/:u:/g/personal/yuz_l0_tn/ESlXt_CudNdArAHr0mtdn6gBjAtU3sT0o3ngweuAZiDSeA?download=1) teacher model weights for BST training and put them in `. /ckpts/teacher_model_weights/` directory.
 
 ### Re-check
 
@@ -43,12 +51,10 @@ After preparing the datasets and teacher model weights, the project directory st
 	|  |-- feats
 	|  |  |-- gqa-frcn
 	|  |-- raw
-	|  |  |-- eval
-	|  |  |-- questions1.2
-	|  |  |-- sceneGraphs
 |-- ckpts
-	|-- ckpt_vqa_mcan_teacher
-	|-- ckpt_gqa_mcan_teacher
+	|-- teacher_model_weights
+	|  |-- vqav2_teacher_epoch14.pkl
+	|  |-- gqa_teacher_epoch11.pkl
 ```
 
 **Note that if you only want to run experiments on one specific dataset, you can focus on the setup for that and skip the rest. For example, if you just want to run experiments on VQA-v2 dataset, you can only prepare the VQA-v2 dataset and vqa teacher model weights.**
@@ -96,7 +102,7 @@ $ python3 run.py --RUN='val' --MODEL='mcan_bst' --DATASET='gqa' --CKPT_V='your_g
 
 We also provide the checkpoint models on the VQA-v2 and GQA datasets to reproduce the following results on `test-dev` using the testing script above.
 
-| model      | VQA-v2 ([ckpt](https://pan.baidu.com/s/1ilqmf7cfshjfA6ovbCM2bg?pwd=8888)) | GQA ([ckpt](https://pan.baidu.com/s/1tokUQbWDqWvCiC4Uy4cs_A?pwd=8888)) |
+| model      | VQA-v2 ([ckpt](https://awma1-my.sharepoint.com/:u:/g/personal/yuz_l0_tn/EZasOMzt9nlPkLpw0dgLR_0B-XZPz1ede5uGuckNVGz5iw?download=1)) | GQA ([ckpt](https://awma1-my.sharepoint.com/:u:/g/personal/yuz_l0_tn/ETUhPacQZZRMk3i-8K40kFIBlPn6pqTG1JSn6scg96CIAA?download=1)) |
 | :---------- | :-------------: | :----------: |
 | MCAN<sub>BST</sub> (D, L) | 71.04 | 58.37 |
 | MCAN<sub>BST</sub> (1/2D, L) | 70.48 | 57.78 |
