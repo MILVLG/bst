@@ -25,7 +25,7 @@ Please download our re-splited QA annotations for [VQA-v2](https://awma1-my.shar
 
 ```
 # for VQA-v2 QA annotations
-$ unzip -d ./data/vqa/raw/ vqa-data.zip
+$ unzip -d ./data/vqa/raw/ vqav2-data.zip
 
 # for GQA QA annotations
 $ unzip -d ./data/gqa/raw/ gqa-data.zip
