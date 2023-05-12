@@ -1,6 +1,6 @@
 ## Introduction
 
-This is code for our [paper](https://ieeexplore.ieee.org/abstract/document/10075477) "Bilaterally Slimmable Transformer for Elastic and Efficient Visual Question Answering". Bilaterally Slimmable Transformer (BST) is a general framework that can be seamlessly integrated into arbitrary Transformer-based VQA models to train a single model once and obtain various slimmed submodels of different widths and depths. In this repo, we integrate the proposed BST framework with the MCAN model and train it on VQA-v2 and GQA datasets. The code is adopted from the [OpenVQA](https://github.com/MILVLG/openvqa) repo. Many thanks to the authors of this repo!
+This is code for our [paper](https://ieeexplore.ieee.org/abstract/document/10075477) "Bilaterally Slimmable Transformer for Elastic and Efficient Visual Question Answering". Bilaterally Slimmable Transformer (BST) is a general framework that can be seamlessly integrated into arbitrary Transformer-based VQA models to train a single model once and obtain various slimmed submodels of different widths and depths. In this repo, we integrate the proposed BST framework with the MCAN model and train it on VQA-v2 and GQA datasets. The code is based on the [OpenVQA](https://github.com/MILVLG/openvqa) repo.
 
 <p align="center">
 	<img src="misc/schematic.png" width="550">
@@ -122,6 +122,7 @@ If you use this code in your research, please cite our paper:
   title={Bilaterally Slimmable Transformer for Elastic and Efficient Visual Question Answering}, 
   author={Yu, Zhou and Jin, Zitian and Yu, Jun and Xu, Mingliang and Wang, Hongbo and Fan, Jianping},
   journal={IEEE Transactions on Multimedia}, 
+  url={10.1109/TMM.2023.3254205},
   year={2023}
 }
 ```
